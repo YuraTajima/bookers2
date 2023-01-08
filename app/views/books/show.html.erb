@@ -1,3 +1,4 @@
+
 <h2>User info</h2>
 
 
@@ -19,11 +20,10 @@
 </div>
 <% end %>
 
-<h2>Books</h2>
-<% @books.each do |book| %>
-  <p>Title</p>
-  <p>Opinion</p>
-  <span><%= book.title %></span>
-  <span><%= book.body %></span>
 
+<h2>Book detail</h2>
+<% @books.each do |book| %>
+  <%= @book.title %>
+  <%= @book.body %>
+      
 <% end %>

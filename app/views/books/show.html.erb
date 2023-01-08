@@ -1,2 +1,29 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h2>User info</h2>
+
+
+<h2>New book</h2>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+<div class="field">
+  <label>Title</label>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <label>Opinion</label>
+  <%= f.text_area :body %>
+</div>
+
+<div class="actions">
+  <%= f.submit 'Create Book' %>
+</div>
+<% end %>
+
+<h2>Books</h2>
+<% @books.each do |book| %>
+  <p>Title</p>
+  <p>Opinion</p>
+  <span><%= book.title %></span>
+  <span><%= book.body %></span>
+
+<% end %>

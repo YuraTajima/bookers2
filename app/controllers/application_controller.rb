@@ -5,12 +5,9 @@ class ApplicationController < ActionController::Base
     about_path
   end
   
-
-#aboutページに飛ぶ設定
-
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
 end

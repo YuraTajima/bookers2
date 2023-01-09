@@ -2,6 +2,7 @@
 
 
 
+
 <h2>New book</h2>
 
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
@@ -20,11 +21,8 @@
 </div>
 <% end %>
 
-<h2>Books</h2>
-<% @books.each do |book| %>
-  <p>Title</p>
-  <p>Opinion</p>
-  <span><%= book.title %></span>
-  <span><%= book.body %></span>
+<h2>Users</h2>
 
-<% end %>
+<p>inage</p>
+<p>name</p>
+

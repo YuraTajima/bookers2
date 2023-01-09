@@ -1,7 +1,10 @@
 <h2>User info</h2>
 
+<h3><%= @user.name %></h3>
 
-
+<% if @user.id == current_user.id %>
+  <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+<% end %>
 
 <h2>New book</h2>
 
@@ -21,8 +24,8 @@
 </div>
 <% end %>
 
-<h2>Users</h2>
+<h2>Books</h2>
 
-<p>inage</p>
-<p>name</p>
+<p>Title</p>
+<p>Opinion</p>
 

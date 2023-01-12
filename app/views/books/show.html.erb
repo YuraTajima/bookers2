@@ -52,7 +52,11 @@
                 <%= image_tag current_user.get_profile_image(80,80) %><br><%= current_user.name %>
                 <% end %>
               </th>
-              <th><%= @book.title %></th>
+              <th>
+                <%= link_to book_path(@book.id) do %>
+                <%= @book.title %>
+                <% end %>
+                </th>
               <th><%= @book.body %></th>
               <th><%= link_to 'Edit', edit_book_path(@book.id) %></th>
               <th><%= link_to 'Destroy', book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか?" %></th>

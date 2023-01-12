@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col-md-3">
         <h2>User info</h2>
+        <%= image_tag @user.get_profile_image(100,100) %>
+        
         <table class="table">
           <tbody>
             <tr>
@@ -16,7 +18,6 @@
             </tr>
           </tbody>
         </table>
-        
         <div class="row">
           <% if @user.id == current_user.id %>
             <p class="btn btn-outline-secondary btn-block"><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
@@ -53,6 +54,13 @@
               <th colspan="3"></th>
             </tr>
           </thead>
+          <tobody>
+            <tr>
+              <th><%= image_tag @user.get_profile_image(80,80) %></th>
+              <th>title</th>
+              <th>opinion</th>
+            </tr>
+          </tobody>
         </table>
       </div>
     </div>

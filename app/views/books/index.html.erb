@@ -19,7 +19,7 @@
           </tbody>
         </table>
         <div class="row">
-            <p class="btn btn-outline-secondary btn-block">プロフィール編集</p>
+            <%= link_to "プロフィール編集", edit_user_path(current_user), class: 'btn btn-outline-secondary btn-block' %>
         </div>
 
         <h2 class="mt-3">New book</h2>
@@ -53,11 +53,13 @@
             </tr>
           </thead>
           <tobody>
+            <% @books.each do |book| %>
             <tr>
-              <th>画像</th>
-              <th>title</th>
-              <th>opinion</th>
+              <th><%= image_tag current_user.get_profile_image(80,80) %></th>
+              <th><%= book.title %></th>
+              <th><%= book.body %></th>
             </tr>
+            <% end %>
           </tobody>
         </table>
       </div>

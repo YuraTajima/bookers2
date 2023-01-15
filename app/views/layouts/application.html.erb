@@ -24,43 +24,43 @@
             <% if user_signed_in? %>
             <li class="nav-link text-light">
               <%= link_to user_path(current_user.id) do %>
-              <i class="fa-solid fa-house"></i>Home
+              <i class="fas fa-home"></i>Home
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%=  link_to users_path do %>
-              <i class="fa-solid fa-user"></i>Users
+              <i class="fas fa-users"></i>Users
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%= link_to books_path do %>
-              <i class="fa-solid fa-book-open"></i>Books
+              <i class="fas fa-book-open"></i>Books
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out
+              <i class="fas fa-sign-out"></i>Log out
               <% end %>
             </li>
             <% else %>
             <li class="nav-link text-light">
               <%= link_to root_path do %>
-              <i class="fa-solid fa-house"></i>Home
+              <i class="fas fa-home"></i>Home
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%= link_to about_path do %>
-              <i class="fa-solid fa-link"></i>About
+              <i class="fas fa-link"></i>About
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%= link_to new_user_registration_path do %>
-              <i class="fa-solid fa-user-plus"></i>Sign up
+              <i class="far fa-user-plus"></i>Sign up
               <% end %>
             </li>
             <li class="nav-link text-light">
               <%= link_to new_user_session_path do %>
-              <i class="fa-solid fa-right-to-bracket"></i>Log in
+              <i class="fas fa-sign-in-alt"></i>Log in
               <% end %>
             </li>
             <% end %>

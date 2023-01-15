@@ -69,7 +69,7 @@
                 <%= link_to book_path(@book.id) do %>
                 <%= @book.title %>
                 <% end %>
-                </th>
+              </th>
               <th><%= @book.body %></th>
               <th><%= link_to 'Edit', edit_book_path(@book.id) %></th>
               <th><%= link_to 'Destroy', book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか?" %></th>
